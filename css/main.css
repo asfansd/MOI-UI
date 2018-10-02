@@ -1,0 +1,52 @@
+.btn-group button {
+    background-color: #e7e7e7; /* Green background */
+    border: 1px solid grey; /* Green border */
+    color: black; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #676d67;
+}
+
+.sample {
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    border-radius: 12px; 
+    background-color: #e7e7e7; 
+    color: black; 
+    font-size: 16px; 
+    padding: 10px 25px; 
+    text-align: center;
+}
+.sample:hover {
+    background-color: #e7e7e7;
+}
+.myGrid {
+    width: 1500px;
+    height: 700px;
+    text-align: center;
+}
+.red{
+    color: crimson
+}
+.yellow{
+    color: orange
+}
+.green{
+    color: rgb(48, 159, 48)
+}

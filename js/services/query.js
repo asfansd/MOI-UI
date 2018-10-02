@@ -1,15 +1,7 @@
-app.service('query', ['$scope', '$http', function($scope, $http) {
-    var message="{ PagingAlert(alertParams:{status: \"closed\",from:"+$scope.start.getTime()+",to:"+$scope.end.getTime()+",nextPage:\"0\",limit:10000})"+
-             "{ alerts{ algorithm count endTime id severity startTime status metricValue partCluster reason }}}";
-    $http({
-        method: 'POST',
-        url: 'http://moi-x86-1:61580/graphql/v1/query',
-        data: { "message" : message },
-        headers: {'Content-Type': 'application/json'}
+app.service('query', ['$http', function($http) {
+    return $http.get("http://10.134.108.185:9090").then(function(data){
+        return data;
+    }, function(err){
+        return err;
     })
-    .then(function (response){
-        return response;
-      },function (error){
-        return error;
-    });
 }])

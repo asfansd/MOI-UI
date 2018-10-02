@@ -1,18 +1,31 @@
-<p>{{ demo.start }}</p>
-<p>{{ demo.end }}</p>
-<p>{{ temp2 }}</p>
-<p>{{ temp3 }}</p>
-<div>
-    <br>
-    <input type="button" class="sample" value="1H" ng-click="filterDate('1H')">
-    <input type="button" value="1D" ng-click="filterDate('1D')">
-    <input type="button" value="1W" ng-click="filterDate('1W')">
-    <input type="button" value="1M" ng-click="filterDate('1M')">
-    <input type="button" value="All" ng-click="filterDate('All')">
-    <input type="datetime-local" ng-model="start" >
-    <input type="datetime-local" ng-model="end" >
-    <br>
-    <br>
+<br>
+<div class="row">
+    <div class="column">
+        <p>{{ test.start }}</p>
+    </div>
+    <div class="column">
+        <p>{{ test.end }}</p>
+    </div>
+    <div class="column" align="center">    
+        <p style="font-family: 'Arial', Helvetica, sans-serif; font-weight:bold">Custom</p>
+        <div class="btn-group" align="center" style="width:100%">
+            <button style="width:20%" ng-click="filterDate('1H')">1H</button>
+            <button style="width:20%" ng-click="filterDate('1D')">1D</button>
+            <button style="width:20%" ng-click="filterDate('1W')">1W</button>
+            <button style="width:20%" ng-click="filterDate('1M')">1M</button>
+            <button style="width:20%" ng-click="filterDate('All')">All</button>
+        </div>
+    </div>
+    <div class = "column" align="center">
+        <p align="center" style="font-family: 'Arial', Helvetica, sans-serif; font-weight:bold">Start Time</p>
+        <input type="datetime-local" class="datepicker" ng-model="start">
+    </div>
+    <div class = "column" align="center">
+        <p align="center" style="font-family: 'Arial', Helvetica, sans-serif; font-weight:bold">End Time</p>
+        <input type="datetime-local" class="datepicker" ng-model="end">
+    </div>
 </div>
+<br>
+<br>
 <div ui-grid="analysisGrid" class="myGrid"></div>
 <br>
